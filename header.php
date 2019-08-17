@@ -15,7 +15,7 @@
 <body <?php body_class(); ?>>
     <div id="wrapper">
         <header>
-          <h1><a href="<?php bloginfo('url'); ?>"><?php bloginfo('name'); ?></a></h1>
+          <h1><a href="<?php echo home_url(); ?>"><?php bloginfo('name'); ?></a></h1>
           <span id=”description”><?php bloginfo('description'); ?></span>
           <?php if(has_nav_menu('menu')) : ?>
                 <nav id="menu">
