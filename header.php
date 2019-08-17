@@ -15,6 +15,16 @@
 <body <?php body_class(); ?>>
     <div id="wrapper">
         <header>
+          <?php if(has_nav_menu('menu')) : ?>
+                <nav id="menu">
+                    <?php wp_nav_menu( array(
+                      'theme-location' => 'menu',
+                      'menu_class' => 'menu', //Fügt eine Klasse zum Menü hinzu
+                      'container_id' => 'navwrap', //Legt ID des Containers fest, der das komplette Menü umgibt
+                      )
+                    ); ?>
+                  </nav>
+          <?php endif; ?>
         </header><!-- #header -->
 
         <main>
