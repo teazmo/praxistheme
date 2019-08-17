@@ -21,8 +21,7 @@
                 <nav id="menu">
                     <?php wp_nav_menu( array(
                       'theme-location' => 'menu',
-                      'menu_class' => 'menu', //Fügt eine Klasse zum Menü hinzu
-                      'container_id' => 'navwrap', //Legt ID des Containers fest, der das komplette Menü umgibt
+                      'menu_class' => 'menu' //Fügt eine Klasse zum Menü hinzu
                       )
                     ); ?>
                   </nav>
