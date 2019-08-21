@@ -4,7 +4,7 @@
 <head>
 <meta charset="<?php bloginfo( 'charset' ); ?>">
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-<title><?php wp_title(); ?> - <?php bloginfo('name'); ?></title>
+<!--title tag gelöscht, weil WP die title tag funktion übernimmt. siehe functions.php add theme support-->
 
 <link rel="stylesheet" href="<?php bloginfo('stylesheet_url'); ?>" type="text/css" media="screen" />
 <link rel="pingback" href="<?php bloginfo('pingback_url'); ?>" />
