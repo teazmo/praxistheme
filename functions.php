@@ -27,7 +27,7 @@ if ( ! function_exists( 'praxistheme_setup' ) ) :
       register_nav_menus(
           array('menu' => __( 'Header Menu','praxistheme') )
           );
-      }
+
 
       /**
        * Add support for core custom logo. Output in HTML: <a href="[home]" class="custom-logo-link" rel="home"><img width="158" height="105" src="..." class="custom-logo" alt="WordPress_A"></a>
@@ -50,6 +50,14 @@ if ( ! function_exists( 'praxistheme_setup' ) ) :
         'default-image' => '',
       ) ) );
 
+      //Vorschaubilder für Beiträge, Seiten und CPTs
+      add_theme_support( 'post-thumbnails');
+
+      //Thumbnailgröße und Anweisung, das Bild anzuschneiden(crop) und mittig anzuordnen
+      set_post_thumbnail_size( 100, 100, array( 'center', 'center') );
+
+
+    }
 endif;
 
 add_action ('after_setup_theme','praxistheme_setup');
