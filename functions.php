@@ -56,6 +56,11 @@ if ( ! function_exists( 'praxistheme_setup' ) ) :
       //Thumbnailgröße und Anweisung, das Bild anzuschneiden(crop) und mittig anzuordnen
       set_post_thumbnail_size( 100, 100, array( 'center', 'center') );
 
+      //Icon Fonts fontawesome installieren
+      function wpb_load_fa() {
+              wp_enqueue_style( 'wpb-fa', get_stylesheet_directory_uri() . '/icons/css/all.css' );
+      }
+      add_action( 'wp_enqueue_scripts', 'wpb_load_fa' );
 
     }
 endif;
