@@ -350,8 +350,32 @@ template {
   display: none;
 }
 
-body {
-  background: red;
+/* roboto-700 - latin */
+@font-face {
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 700;
+  src: url("fonts/roboto-v20-latin-700.eot");
+  /* IE9 Compat Modes */
+  src: local("Roboto Bold"), local("Roboto-Bold"), url("fonts/roboto-v20-latin-700.eot?#iefix") format("embedded-opentype"), url("fonts/roboto-v20-latin-700.woff2") format("woff2"), url("fonts/roboto-v20-latin-700.woff") format("woff"), url("fonts/roboto-v20-latin-700.ttf") format("truetype"), url("fonts/roboto-v20-latin-700.svg#Roboto") format("svg");
+  /* Legacy iOS */
+}
+/* lora-regular - latin */
+@font-face {
+  font-family: "Lora";
+  font-style: normal;
+  font-weight: 400;
+  src: url("fonts/lora-v14-latin-regular.eot");
+  /* IE9 Compat Modes */
+  src: local("Lora Regular"), local("Lora-Regular"), url("fonts/lora-v14-latin-regular.eot?#iefix") format("embedded-opentype"), url("fonts/lora-v14-latin-regular.woff2") format("woff2"), url("fonts/lora-v14-latin-regular.woff") format("woff"), url("fonts/lora-v14-latin-regular.ttf") format("truetype"), url("fonts/lora-v14-latin-regular.svg#Lora") format("svg");
+  /* Legacy iOS */
+}
+h1, h2, h3, h4, h5, h6 {
+  font-family: "Roboto", sans-serif;
+}
+
+p {
+  font-family: "Lora", sans-serif;
 }
 
 /* WordPress dynamische generierte Klassen notwendig laut theme check */
