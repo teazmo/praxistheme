@@ -370,12 +370,12 @@ template {
   src: local("Lora Regular"), local("Lora-Regular"), url("fonts/lora-v14-latin-regular.eot?#iefix") format("embedded-opentype"), url("fonts/lora-v14-latin-regular.woff2") format("woff2"), url("fonts/lora-v14-latin-regular.woff") format("woff"), url("fonts/lora-v14-latin-regular.ttf") format("truetype"), url("fonts/lora-v14-latin-regular.svg#Lora") format("svg");
   /* Legacy iOS */
 }
-h1, h2, h3, h4, h5, h6 {
-  font-family: "Roboto", sans-serif;
+body {
+  font-family: "Lora", Georgia, sans-serif;
 }
 
-p {
-  font-family: "Lora", sans-serif;
+h1, h2, h3, h4, h5, h6 {
+  font-family: "Roboto", sans-serif;
 }
 
 /* WordPress dynamische generierte Klassen notwendig laut theme check */
