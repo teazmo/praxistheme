@@ -415,4 +415,17 @@ h1, h2, h3, h4, h5, h6 {
   text-align: left;
 }
 
+@media all and (-ms-high-contrast: none) {
+  .foo {
+    color: green;
+  }
+
+  /* IE10 */
+  *::-ms-backdrop, .foo {
+    color: red;
+  }
+
+  /* IE11 */
+}
+
 /*# sourceMappingURL=style.css.map */

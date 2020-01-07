@@ -1,0 +1,4 @@
+@media all and (-ms-high-contrast:none){
+     .foo { color: green } /* IE10 */
+     *::-ms-backdrop, .foo { color: red } /* IE11 */
+}
