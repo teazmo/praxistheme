@@ -442,7 +442,8 @@ h1, h2, h3, h4, h5, h6 {
     background-color: #fff;
   }
 
-  .menu-hauptmenue-container,
+  .header-container,
+.menu-hauptmenue-container,
 #content {
     margin: 0 auto;
     max-width: 992px;

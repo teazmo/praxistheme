@@ -15,13 +15,13 @@
 <body <?php body_class(); ?>>
     <div id="wrapper">
         <header>
+          <div class="header-container">
           <!-- Custom Logo section //-->
               <?php if(function_exists('the_custom_logo')) {
                 the_custom_logo();
               } ?>
-          <!-- Custom logo section end -->
-          <h1><a href="<?php echo home_url(); ?>"><?php bloginfo('name'); ?></a></h1>
-          <span id=”description”><?php bloginfo('description'); ?></span>
+          <!-- Custom logo section end -->          
+        </div><!--header-container-->
           <?php if(has_nav_menu('menu')) : ?>
                 <nav id="menu">
                     <?php wp_nav_menu( array(
