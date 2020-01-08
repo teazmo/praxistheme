@@ -434,12 +434,18 @@ h1, h2, h3, h4, h5, h6 {
 }
 @media (min-width: 768px) {
   body {
-    background-color: red;
+    background-color: #fff;
   }
 }
 @media (min-width: 992px) {
   body {
-    background-color: yellow;
+    background-color: #fff;
+  }
+
+  .menu-hauptmenue-container,
+#content {
+    margin: 0 auto;
+    max-width: 992px;
   }
 }
 

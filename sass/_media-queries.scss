@@ -10,13 +10,18 @@
 // Medium devices (tablets, 768px and up)
 @media (min-width: 768px) {
   body {
-    background-color:red;
+    background-color:#fff;
   }
  }
 
 // Large devices (desktops, 992px and up)
 @media (min-width: 992px) {
   body {
-    background-color:yellow;
+    background-color:#fff;
+  }
+  .menu-hauptmenue-container,
+  #content {
+    margin:0 auto;
+    max-width:992px;
   }
  }
