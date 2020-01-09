@@ -452,11 +452,13 @@ nav {
     background-color: #fff;
   }
 
-  .header-container,
-.menu-hauptmenue-container,
-#content {
+  .header-container, .menu-hauptmenue-container, #content {
     margin: 0 auto;
     max-width: 992px;
+  }
+
+  .article .row {
+    display: flex;
   }
 }
 
