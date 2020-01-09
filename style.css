@@ -393,6 +393,25 @@ nav {
   background-color: var(--secondary);
 }
 
+.blog-area {
+  padding: 24px;
+}
+
+.article {
+  margin-bottom: 32px;
+}
+.article h2 {
+  margin-top: 0;
+}
+.article h2 a {
+  text-decoration: none;
+  color: var(--primary);
+}
+
+.col-left img {
+  border: 1px solid #aaa;
+}
+
 /* WordPress dynamische generierte Klassen notwendig laut theme check */
 .wp-caption {
   text-align: left;

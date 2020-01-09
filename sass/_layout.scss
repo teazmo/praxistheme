@@ -6,3 +6,19 @@
 nav {
   background-color: var(--secondary);
 }
+.blog-area {
+	padding:24px;
+}
+.article {
+	margin-bottom:32px;
+  h2 {
+  	margin-top:0;
+    a {
+    	text-decoration:none;
+    	color:var(--primary);
+    }
+  }
+}
+.col-left img {
+	border:1px solid #aaa;
+}
