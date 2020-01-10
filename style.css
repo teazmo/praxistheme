@@ -11,6 +11,11 @@ License URI: http://www.gnu.org/licenses/gpl-2.0.html
 Tags: custom-menu, post-formats
 Text Domain: praxistheme
 */
+/*
+* NORMALIZE
+*
+*
+*/
 /*! normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css */
 /* Document
    ========================================================================== */
@@ -350,6 +355,11 @@ template {
   display: none;
 }
 
+/*
+* FONTS
+*
+*
+**/
 /* roboto-700 - latin */
 @font-face {
   font-family: "Roboto";
@@ -370,11 +380,21 @@ template {
   src: local("Lora Regular"), local("Lora-Regular"), url("fonts/lora-v14-latin-regular.eot?#iefix") format("embedded-opentype"), url("fonts/lora-v14-latin-regular.woff2") format("woff2"), url("fonts/lora-v14-latin-regular.woff") format("woff"), url("fonts/lora-v14-latin-regular.ttf") format("truetype"), url("fonts/lora-v14-latin-regular.svg#Lora") format("svg");
   /* Legacy iOS */
 }
+/*
+* VARIABLES
+*
+*
+*/
 :root {
   --primary: #6D415C;
   --secondary: #6ac0b6;
 }
 
+/*
+* TYPO
+*
+*
+*/
 body {
   font-family: "Lora", Georgia, sans-serif;
 }
@@ -389,8 +409,121 @@ h1, h2, h3, h4, h5, h6 {
 *
 *
 */
-nav {
+nav, .menu {
   background-color: var(--secondary);
+}
+
+/* hamburger icon */
+a.menu-trigger span,
+a.menu-trigger span:before,
+a.menu-trigger span:after {
+  position: absolute;
+  letter-spacing: 16px;
+  background-color: white;
+  display: block;
+  width: 30px;
+  height: 4px;
+  -webkit-transition: all 0.4s;
+  -moz-transition: all 0.4s;
+  -o-transition: all 0.4s;
+  transition: all 0.4s;
+  border-radius: 5px;
+}
+
+a.menu-trigger span:before,
+a.menu-trigger span:after {
+  content: "";
+}
+
+a.menu-trigger span {
+  top: 18px;
+}
+
+#main-menu a.menu-trigger:hover {
+  background: none;
+}
+
+a.menu-trigger span:before {
+  top: -8px;
+  z-index: 10;
+  -webkit-transform-origin: 33% 100%;
+  -moz-transform-origin: 33% 100%;
+  -ms-transform-origin: 33% 100%;
+  transform-origin: 33% 100%;
+}
+
+a.menu-trigger span:after {
+  -moz-transform-origin: 33% 0;
+  -ms-transform-origin: 33% 0;
+  -webkit-transform-origin: 33% 0;
+  transform-origin: 33% 0;
+  top: 8px;
+}
+
+a.menu-trigger.active span,
+a.menu-trigger.active span:before,
+a.menu-trigger.active span:after {
+  background-color: transparent;
+}
+
+a.menu-trigger.active span:before {
+  -moz-transform: rotate(45deg);
+  -ms-transform: translateY(4px) translateX(1px) rotate(45deg);
+  -webkit-transform: translateY(4px) translateX(1px) rotate(45deg);
+  transform: translateY(4px) translateX(1px) rotate(45deg);
+  background-color: white;
+}
+
+a.menu-trigger.active span:after {
+  -moz-transform: translateY(4px) translateX(1px) rotate(-45deg);
+  -ms-transform: translateY(-4px) translateX(1px) rotate(-45deg);
+  -webkit-transform: translateY(-4px) translateX(1px) rotate(-45deg);
+  transform: translateY(-4px) translateX(1px) rotate(-45deg);
+  background-color: white;
+}
+
+/*********************************************** Klapp Menü******/
+#main-menu .container {
+  padding: 0;
+  position: relative;
+}
+
+#main-menu ul.menu {
+  margin: 0;
+  padding: 0;
+}
+
+#main-menu li,
+#main-menu li li {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  border-top: 1px solid #fff;
+  /* Trennung der Links auf Handy mittels border */
+}
+
+#main-menu a {
+  display: block;
+  text-decoration: none;
+  padding: 10px 15px;
+  color: #fff;
+  background: var(--primary);
+}
+
+#main-menu a:hover {
+  background: #6D415C;
+}
+
+#main-menu li ul {
+  display: block;
+  overflow: hidden;
+  margin: 0;
+  padding: 0;
+}
+
+#main-menu .current-menu-item a,
+#main-menu a:active {
+  background: #6D415C;
 }
 
 .blog-area {
@@ -412,7 +545,10 @@ nav {
   border: 1px solid #aaa;
 }
 
-/* WordPress dynamische generierte Klassen notwendig laut theme check */
+/*
+* WP-CLASSES
+* notwendig laut theme check
+*/
 .wp-caption {
   text-align: left;
 }
@@ -449,6 +585,11 @@ nav {
   text-align: left;
 }
 
+/*
+* BROWSER
+*
+*
+*/
 @media all and (-ms-high-contrast: none) {
   .foo {
     color: green;
@@ -461,9 +602,14 @@ nav {
 
   /* IE11 */
 }
+/*
+* MEDIA-QUERIES
+*
+* Bootstrap Formate
+*/
 @media (min-width: 576px) {
   body {
-    background-color: green;
+    background-color: #fff;
   }
 }
 @media (min-width: 768px) {

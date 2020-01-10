@@ -10,6 +10,15 @@
 <link rel="pingback" href="<?php bloginfo('pingback_url'); ?>" />
 
 <?php wp_head(); ?>
+<script>
+  jQuery(document).ready(function($){
+      // Öffne und schließe Responsive Navigation
+      $('.menu-trigger').click(function(){
+          $(this).toggleClass('active');
+          $('#main').toggleClass('menu-open');
+      });
+  });
+</script>
 </head>
 
 <body <?php body_class(); ?>>
@@ -20,16 +29,24 @@
               <?php if(function_exists('the_custom_logo')) {
                 the_custom_logo();
               } ?>
-          <!-- Custom logo section end -->          
+          <!-- Custom logo section end -->
         </div><!--header-container-->
-          <?php if(has_nav_menu('menu')) : ?>
-                <nav id="menu">
-                    <?php wp_nav_menu( array(
-                      'theme-location' => 'menu',
-                      'menu_class' => 'menu' //Fügt eine Klasse zum Menü hinzu
-                      )
-                    ); ?>
-                  </nav>
+        <?php if(has_nav_menu('menu')) : ?>
+        <nav id="main-menu">
+			<div class="container">
+				<a class='menu-trigger'>
+        			<span>Menu</span>
+        		</a>
+        		<?php wp_nav_menu( array(
+        			'theme-location' => 'menu',
+        			'depth'	=> 2, // 1 = no dropdowns, 2 = with dropdowns.
+        			'container'       => 'div',
+        			'container_id'    => 'main',
+         			'menu_class'      => 'menu main-menu'
+          				)
+          			); ?>
+			</div><!--.container-->
+        </nav>
           <?php endif; ?>
         </header><!-- #header -->
 
