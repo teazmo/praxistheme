@@ -414,6 +414,16 @@ nav, .menu {
 }
 
 /* hamburger icon */
+#main-menu a.menu-trigger {
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  height: 36px;
+  text-indent: -9999em;
+  /* Schiebt das Wort Menü von der Seite */
+  background: none;
+}
+
 a.menu-trigger span,
 a.menu-trigger span:before,
 a.menu-trigger span:after {
@@ -524,6 +534,20 @@ a.menu-trigger.active span:after {
 #main-menu .current-menu-item a,
 #main-menu a:active {
   background: #6D415C;
+}
+
+/* .menu-open, .open and .more need to be added with jquery */
+#main ul {
+  display: none;
+}
+
+#main.menu-open ul {
+  display: block;
+}
+
+.menu-open,
+.menu .open > ul {
+  max-height: 2000px;
 }
 
 .blog-area {
