@@ -6,7 +6,7 @@
 				<a href="<?php get_site_url();?>/category/allgemein" class="button__link--big">Alle anzeigen</a>
 			</div><!--.blog-header-->
             <?php if (have_posts()) : while (have_posts()) : the_post(); ?>
-                <div class="article">
+                <article <?php post_class(); ?> >
 					<div class="row">
 						<?php if (has_post_thumbnail()) : ?>
 						<div class="col-left">
@@ -23,7 +23,7 @@
 							<a href="<?php the_permalink() ?>" class="more-button button__link--small">Mehr …</a>
 						</div><!--.col-right-->
 					</div><!--.row-->
-                </div> <!-- .article -->
+				</article>
             <?php endwhile; endif; ?>
 			</div><!--.blog-area-->
 <?php get_sidebar(); ?>

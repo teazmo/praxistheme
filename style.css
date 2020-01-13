@@ -581,13 +581,13 @@ a.menu-trigger.active span:after {
   padding: 24px;
 }
 
-.article {
+article {
   margin-bottom: 64px;
 }
-.article h2 {
+article h2 {
   margin-top: 0;
 }
-.article h2 a {
+article h2 a {
   text-decoration: none;
   color: var(--primary);
 }
@@ -766,7 +766,7 @@ a.menu-trigger.active span:after {
     max-width: 992px;
   }
 
-  .article .row {
+  article .row {
     display: flex;
   }
 }
