@@ -8,7 +8,7 @@
             <?php if (have_posts()) : while (have_posts()) : the_post(); ?>
                 <div class="article">
 					<div class="row">
-						<?php if has_post_thumbnail() : ?>
+						<?php if (has_post_thumbnail()) : ?>
 						<div class="col-left">
 							<?php the_post_thumbnail('thumbnail', array('class' => 'card-image')); ?>
 						</div><!--.col-left-->
