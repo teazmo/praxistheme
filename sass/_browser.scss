@@ -5,6 +5,10 @@
 */
 
 @media all and (-ms-high-contrast:none){
-     .foo { color: green } /* IE10 */
+     .blog-header {
+       overflow:hidden;
+     }
+     .blog-header button {
+       float: right; } /* IE10 */
      *::-ms-backdrop, .foo { color: red } /* IE11 */
 }

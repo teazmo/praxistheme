@@ -127,12 +127,16 @@ a.menu-trigger.active span:after {
     max-height: 2000px;
 }
 
-
+.blog-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
 .blog-area {
 	padding:24px;
 }
 .article {
-	margin-bottom:32px;
+	margin-bottom:64px;
   h2 {
   	margin-top:0;
     a {
@@ -141,6 +145,29 @@ a.menu-trigger.active span:after {
     }
   }
 }
+.col-left {
+  padding-right:24px;
+}
 .col-left img {
 	border:1px solid #aaa;
+}
+.button__link {
+  color:#fff;
+  background-color:var(--primary);
+  border:none;
+  text-decoration:none;
+    &--small {
+      @extend .button__link;
+      padding:5px 10px;
+        &:hover, &:active {
+          background-color:var(--secondary);
+        }
+    }
+    &--big {
+      @extend .button__link;
+      padding:10px 20px;
+      &:hover, &:active {
+        background-color:var(--secondary);
+      }
+    }
 }

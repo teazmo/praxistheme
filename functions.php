@@ -66,3 +66,8 @@ if ( ! function_exists( 'praxistheme_setup' ) ) :
 endif;
 
 add_action ('after_setup_theme','praxistheme_setup');
+
+function custom_excerpt_more( $more ) {
+	return ' …';
+}
+add_filter( 'excerpt_more', 'custom_excerpt_more' );
