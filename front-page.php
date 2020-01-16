@@ -8,7 +8,7 @@
     $query = new WP_Query( $args );
 
     if ( $query->have_posts()) : while ( $query->have_posts() ) : $query->the_post(); ?>
-	
+
 	<div class="card">
 		  <div class="card-img-wrapper">
           <?php if ( has_post_thumbnail()) : ?>
@@ -19,10 +19,10 @@
 		  </div><!--card-img-wrapper-->
 		  <h4 class="card-title"><a href="<?php the_permalink() ?>"><?php the_title(); ?></a></h4>
           <div class="card-text"><?php the_excerpt(); ?></div>
-          <p><a href="<?php the_permalink() ?>" class="card-link">Mehr …</a></p>
+          <p><a href="<?php the_permalink() ?>" class="card-link">Mehr…</a></p>
 	</div>
-	
-	
+
+
 	<?php endwhile; else: ?>
     <h1>Es wurden keine Themen definiert.</h1>
     <?php endif;
