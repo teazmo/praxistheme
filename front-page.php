@@ -13,7 +13,7 @@
 		  <div class="card-img-wrapper">
           <?php if ( has_post_thumbnail()) : ?>
 			<a href="<?php the_permalink(); ?>" alt="<?php the_title_attribute(); ?>">
-				<?php the_post_thumbnail('medium', array('class' => 'card-img-top rounded-0')); ?>
+				<?php the_post_thumbnail('medium', array('class' => 'card-img-top')); ?>
 			</a>
 		<?php endif; ?>
 		  </div><!--card-img-wrapper-->
