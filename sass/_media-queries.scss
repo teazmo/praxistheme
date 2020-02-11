@@ -6,16 +6,11 @@
 
 // Small devices (landscape phones, 576px and up)
 @media (min-width: 576px) {
-  body {
-    background-color:#fff;
-  }
+
  }
 
 // Medium devices (tablets, 768px and up)
 @media (min-width: 768px) {
-  body {
-    background-color:#fff;
-  }
   #main-menu a.menu-trigger {
   display: none;  /* Den resp Nav Button wieder ausschalten*/
   }
@@ -64,9 +59,6 @@
 
 // Large devices (desktops, 992px and up)
 @media (min-width: 992px) {
-  body {
-    background-color:#fff;
-  }
   .header-container, .menu-hauptmenue-container, #content {
     margin:0 auto;
     max-width:992px;

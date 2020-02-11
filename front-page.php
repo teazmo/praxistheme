@@ -19,8 +19,10 @@
 		  </div><!--card-img-wrapper-->
 			<div class="card-title-top"></div>
 		  <h4 class="card-title"><a href="<?php the_permalink() ?>"><?php the_title(); ?></a></h4>
-          <div class="card-text"><?php the_excerpt(); ?></div>
-          <p><a href="<?php the_permalink() ?>" class="card-link">Mehr…</a></p>
+          <div class="card-text">
+						<?php the_excerpt(); ?>
+          	<p><a href="<?php the_permalink() ?>" class="card-link button__link--small" >Mehr…</a></p>
+					</div>
 	</div>
 
 
