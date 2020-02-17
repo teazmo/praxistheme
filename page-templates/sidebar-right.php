@@ -1,3 +1,4 @@
+<?php /* Template Name: Rechte Seitenleiste */ ?>
 <?php get_header(); ?>
             <?php if (have_posts()) : while (have_posts()) : the_post(); ?>
                 <div class="article">
@@ -5,4 +6,5 @@
                     <?php the_content(); ?>
                 </div> <!-- .article -->
             <?php endwhile; endif; ?>
+<?php if ( function_exists( 'register_sidebar' ) ) { get_sidebar();} ?>
 <?php get_footer(); ?>

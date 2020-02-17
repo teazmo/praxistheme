@@ -555,7 +555,7 @@ a.menu-trigger.active span:after {
   text-decoration: none;
   padding: 10px 15px;
   color: #fff;
-  background: var(--primary);
+  background: var(--secondary);
 }
 
 #main-menu a:hover {
@@ -588,7 +588,7 @@ a.menu-trigger.active span:after {
   max-height: 2000px;
 }
 
-/*========================================== CARDS */
+/* ========================================== CARDS */
 .cards-area {
   display: flex;
   flex-wrap: wrap;
@@ -691,6 +691,7 @@ article h2 a {
   color: #ffffff;
 }
 
+/* ===================================================== PAGE */
 /*
 * WP-CLASSES
 * notwendig laut theme check
@@ -817,6 +818,15 @@ article h2 a {
 
   #main-menu .menu > li:hover > ul {
     left: 0;
+  }
+
+  .page-template-sidebar-right #content {
+    display: flex;
+  }
+  .page-template-sidebar-right #sidebar {
+    padding: 10px;
+    border: 1px solid grey;
+    margin-left: 20px;
   }
 }
 @media (min-width: 992px) {

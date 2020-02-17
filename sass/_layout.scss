@@ -101,7 +101,7 @@ a.menu-trigger.active span:after {
     text-decoration: none;
     padding: 10px 15px;
     color: #fff;
-    background: var(--primary);
+    background: var(--secondary);
 }
 #main-menu a:hover {
     background: #6D415C;
@@ -129,7 +129,7 @@ a.menu-trigger.active span:after {
 .menu .open > ul{
     max-height: 2000px;
 }
-/*========================================== CARDS */
+/* ========================================== CARDS */
 
 .cards-area {
   display:flex;
@@ -224,3 +224,4 @@ article {
       }
     }
 }
+/* ===================================================== PAGE */

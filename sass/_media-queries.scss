@@ -55,7 +55,17 @@
   #main-menu .menu > li:hover > ul{
     left: 0;
   }
- }
+  .page-template-sidebar-right {
+      #content {
+        display:flex;
+        }
+      #sidebar {
+        padding:10px;
+        border:1px solid grey;
+        margin-left:20px;
+        }
+    }
+}
 
 // Large devices (desktops, 992px and up)
 @media (min-width: 992px) {
