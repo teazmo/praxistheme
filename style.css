@@ -438,6 +438,11 @@ a:hover, a:active {
   color: var(--secondary);
 }
 
+img {
+  max-width: 100%;
+  height: auto;
+}
+
 /*
 * LAYOUT
 *
@@ -445,6 +450,10 @@ a:hover, a:active {
 */
 header {
   background: #fff;
+}
+
+.header-container {
+  padding: 24px;
 }
 
 nav, .menu {

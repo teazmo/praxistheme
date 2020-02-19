@@ -61,5 +61,4 @@
 				</article>
             <?php endwhile; endif; ?>
 			</div><!--.blog-area-->
-<?php get_sidebar(); ?>
 <?php get_footer(); ?>

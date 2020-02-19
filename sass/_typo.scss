@@ -23,3 +23,7 @@ a {
 a:hover, a:active {
   color: var(--secondary);
 }
+img {
+  max-width:100%;
+  height: auto;
+}
