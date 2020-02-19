@@ -456,6 +456,10 @@ header {
   padding: 24px;
 }
 
+.custom-logo {
+  max-width: 250px;
+}
+
 nav, .menu {
   background-color: var(--secondary);
 }
