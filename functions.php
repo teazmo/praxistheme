@@ -30,7 +30,10 @@ if ( ! function_exists( 'praxistheme_setup' ) ) :
 
 
       /**
-       * Add support for core custom logo. Output in HTML: <a href="[home]" class="custom-logo-link" rel="home"><img width="158" height="105" src="..." class="custom-logo" alt="WordPress_A"></a>
+       * Add support for core custom logo. Output in HTML:
+       *  <a href="[home]" class="custom-logo-link" rel="home">
+       *   <img width="158" height="105" src="..." class="custom-logo" alt="WordPress_A">
+       *  </a>
        *
        * @link https://codex.wordpress.org/Theme_Logo
        */
@@ -66,6 +69,37 @@ if ( ! function_exists( 'praxistheme_setup' ) ) :
 endif;
 
 add_action ('after_setup_theme','praxistheme_setup');
+
+
+
+
+function widgets_init() {
+
+  register_sidebar( array(
+    'name' => __( 'Sidebar'),
+    'id' => 'sidebar-widget-area',
+    'description' => __( 'Bereich für Widgets innerhalb der Sidebar' ),
+    'before_widget' => '<li id="%1$s" class="widget-container %2$s">',
+    'after_widget' => '</li>',
+    'before_title' => '<strong class="widget-title">',
+    'after_title' => '</strong>'
+    ) );
+
+  register_sidebar( array(
+    'name' => __( 'Footer'),
+    'id' => 'footer-widget-area',
+    'description' => __( 'Bereich für Widgets innerhalb des Footer'),
+    'before_widget' => '<li id="%1$s" class="widget-container %2$s">',
+    'after_widget' => '</li>',
+    'before_title' => '<strong class="widget-title">',
+    'after_title' => '</strong>'
+    ) );
+  }
+
+add_action( 'widgets_init', 'widgets_init' );
+
+
+
 
 function custom_excerpt_more( $more ) {
 	return ' …';

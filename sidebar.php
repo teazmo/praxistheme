@@ -1,3 +1,7 @@
 <aside id="sidebar">
-  <h1>Sidebar</h1>
+  <?php if(is_active_sidebar('sidebar-widget-area')) : ?>
+    <div class="widget-item">
+      <?php dynamic_sidebar('sidebar-widget-area'); ?>
+    </div>
+  <?php endif; ?>
 </aside><!-- #sidebar -->
