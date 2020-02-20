@@ -6,7 +6,9 @@
 
 // Small devices (landscape phones, 576px and up)
 @media (min-width: 576px) {
-
+    #footer ul li a {
+      padding-right: 20px;
+    }
  }
 
 // Medium devices (tablets, 768px and up)
@@ -69,7 +71,7 @@
 
 // Large devices (desktops, 992px and up)
 @media (min-width: 992px) {
-  .header-container, .menu-hauptmenue-container, #content {
+  .header-container, .menu-hauptmenue-container, #content, #footer-content {
     margin:0 auto;
     max-width:992px;
   }

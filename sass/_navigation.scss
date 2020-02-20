@@ -1,0 +1,141 @@
+/* ========= NAVIGATION */
+
+/* hamburger icon */
+
+#main-menu a.menu-trigger {
+    cursor: pointer;
+    display: inline-block;
+    position: relative;
+    height:36px;
+    text-indent: -9999em; /* Schiebt das Wort Menü von der Seite */
+    background: none;
+}
+
+a.menu-trigger span,
+a.menu-trigger span:before,
+a.menu-trigger span:after{
+    position: absolute;
+    letter-spacing: 16px;
+    background-color: white;
+    display: block;
+    width: 30px;
+    height: 4px;
+    -webkit-transition: all 0.4s;
+    -moz-transition: all 0.4s;
+    -o-transition: all 0.4s;
+    transition: all 0.4s;
+    border-radius: 5px;
+}
+a.menu-trigger span:before,
+a.menu-trigger span:after {
+    content: "";
+}
+a.menu-trigger span {
+    top: 18px;
+}
+#main-menu a.menu-trigger:hover {
+  background:none;
+}
+a.menu-trigger span:before {
+    top: -8px;
+    z-index: 10;
+    -webkit-transform-origin: 33% 100%;
+    -moz-transform-origin: 33% 100%;
+    -ms-transform-origin: 33% 100%;
+    transform-origin: 33% 100%;
+}
+a.menu-trigger span:after {
+    -moz-transform-origin: 33% 0;
+    -ms-transform-origin: 33% 0;
+    -webkit-transform-origin: 33% 0;
+    transform-origin: 33% 0;
+    top: 8px;
+}
+a.menu-trigger.active span,
+a.menu-trigger.active span:before,
+a.menu-trigger.active span:after {
+    background-color: transparent;
+}
+a.menu-trigger.active span:before {
+    -moz-transform: rotate(45deg);
+    -ms-transform: translateY(4px) translateX(1px) rotate(45deg);
+    -webkit-transform: translateY(4px) translateX(1px) rotate(45deg);
+    transform: translateY(4px) translateX(1px) rotate(45deg);
+    background-color: white;
+}
+a.menu-trigger.active span:after {
+    -moz-transform: translateY(4px) translateX(1px) rotate(-45deg);
+    -ms-transform: translateY(-4px) translateX(1px) rotate(-45deg);
+    -webkit-transform: translateY(-4px) translateX(1px) rotate(-45deg);
+    transform: translateY(-4px) translateX(1px) rotate(-45deg);
+    background-color: white;
+}
+/*********************************************** Klapp Menü******/
+
+#main-menu .container {
+  padding:0;
+  position: relative /* Damit Service Menü mit Icons absolut positioniert werden kann */
+}
+#main-menu ul.menu {
+    margin: 0;
+    padding: 0;
+}
+#main-menu li,
+#main-menu li li {
+    list-style: none;
+    padding: 0;
+    margin:0;
+    border-top:1px solid #fff; /* Trennung der Links auf Handy mittels border */
+}
+#main-menu a {
+    display: block;
+    text-decoration: none;
+    padding: 10px 15px;
+    color: #fff;
+    background: var(--secondary);
+}
+#main-menu a:hover {
+    background: #6D415C;
+}
+#main-menu li ul {
+    display: block;
+    overflow: hidden;
+    margin: 0;
+    padding: 0;
+}
+#main-menu .current-menu-item a,
+#main-menu a:active {
+    background: #6D415C;
+}
+/* .menu-open, .open and .more need to be added with jquery */
+
+#main ul {
+    display:none;
+}
+
+#main.menu-open ul {
+    display:block;
+}
+.menu-open,
+.menu .open > ul{
+    max-height: 2000px;
+}
+
+#footer ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+#footer ul li {
+    display: inline-block;
+}
+#footer ul li a {
+    display: block;
+    color: #fff;
+    text-decoration: none;
+}
+#footer ul li a:hover,
+#footer ul li a:active,
+#footer ul li a:focus {
+  text-decoration: underline;
+}
