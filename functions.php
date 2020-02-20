@@ -79,20 +79,16 @@ function widgets_init() {
     'name' => __( 'Sidebar'),
     'id' => 'sidebar-widget-area',
     'description' => __( 'Bereich für Widgets innerhalb der Sidebar' ),
-    'before_widget' => '<li id="%1$s" class="widget-container %2$s">',
-    'after_widget' => '</li>',
-    'before_title' => '<strong class="widget-title">',
-    'after_title' => '</strong>'
+    'before_widget' => '',
+    'after_widget' => ''
     ) );
 
   register_sidebar( array(
     'name' => __( 'Footer'),
     'id' => 'footer-widget-area',
     'description' => __( 'Bereich für Widgets innerhalb des Footer'),
-    'before_widget' => '<li id="%1$s" class="widget-container %2$s">',
-    'after_widget' => '</li>',
-    'before_title' => '<strong class="widget-title">',
-    'after_title' => '</strong>'
+    'before_widget' => '', // <li id="%1$s" class="widget-container %2$s">
+    'after_widget' => '' // </li>
     ) );
   }
 
