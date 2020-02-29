@@ -26,7 +26,7 @@
   #main-menu li ul {
         display:block; /* Die auf dem Handy ausgeblendete erste Ebene wieder einblenden*/
     }
-  #main-menu li ul{
+  #main-menu li ul {
         left: -9999px;
         position:absolute;
         overflow: visible;
@@ -58,22 +58,25 @@
     left: 0;
   }
   .page-template-sidebar-right {
+      .article {
+        max-width:600px;
+      }
       #content {
         display:flex;
         }
       #sidebar {
         padding:10px;
-        border:1px solid grey;
-        margin-left:20px;
+        background:#fff;
+        margin-left:16px;
+        max-width:300px;
         }
     }
 }
-
-// Large devices (desktops, 992px and up)
-@media (min-width: 992px) {
-  .header-container, .menu-hauptmenue-container, #content, #footer-content {
+//912 nach 8-Pixel-Einheit
+@media (min-width: 912px) {
+  header, nav, main, .cards-section, .blog-section, footer {
     margin:0 auto;
-    max-width:992px;
+    max-width:912px;
   }
   article .row {
     display:flex;

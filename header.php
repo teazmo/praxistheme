@@ -23,17 +23,20 @@
 
 <body <?php body_class(); ?>>
     <div id="wrapper">
+        <div class="header-wrapper">
         <header>
-          <div class="header-container">
+
           <!-- Custom Logo section //-->
               <?php if(function_exists('the_custom_logo')) {
                 the_custom_logo();
               } ?>
           <!-- Custom logo section end -->
+        </header><!-- #header -->
         </div><!--header-container-->
         <?php if(has_nav_menu('menu')) : ?>
+        			<div class="nav-wrapper">
         <nav id="main-menu">
-			<div class="container">
+
 				<a class='menu-trigger'>
         			<span>Menu</span>
         		</a>
@@ -45,10 +48,7 @@
          			'menu_class'      => 'menu main-menu'
           				)
           			); ?>
-			</div><!--.container-->
-        </nav>
-          <?php endif; ?>
-        </header><!-- #header -->
+          </nav>
+      </div><!--.container-->
 
-        <main>
-          <div id="content">
+          <?php endif; ?>

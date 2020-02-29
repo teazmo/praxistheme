@@ -1,40 +1,41 @@
 <?php get_header(); ?>
+<div class="cards-wrapper">
+	<div class="row cards-section">
+		<?php
+	    $args = array( 'post_type' => 'post');
 
-<div class="row cards-area">
-	<?php
-    $args = array( 'post_type' => 'post');
+	    // Custom query.
+	    $query = new WP_Query( $args );
 
-    // Custom query.
-    $query = new WP_Query( $args );
+	    if ( $query->have_posts()) : while ( $query->have_posts() ) : $query->the_post(); ?>
 
-    if ( $query->have_posts()) : while ( $query->have_posts() ) : $query->the_post(); ?>
-
-	<div class="card">
-		  <div class="card-img-wrapper">
-          <?php if ( has_post_thumbnail()) : ?>
-			<a href="<?php the_permalink(); ?>" alt="<?php the_title_attribute(); ?>">
-				<?php the_post_thumbnail('medium', array('class' => 'card-img-top')); ?>
-			</a>
-		<?php endif; ?>
-		  </div><!--card-img-wrapper-->
-			<div class="card-title-top"></div>
-		  <h4 class="card-title"><a href="<?php the_permalink() ?>"><?php the_title(); ?></a></h4>
-          <div class="card-text">
-						<?php the_excerpt(); ?>
-          	<p><a href="<?php the_permalink() ?>" class="card-link button__link--small" >Mehr…</a></p>
-					</div>
-	</div>
+		<div class="card">
+			  <div class="card-img-wrapper">
+	          <?php if ( has_post_thumbnail()) : ?>
+				<a href="<?php the_permalink(); ?>" alt="<?php the_title_attribute(); ?>">
+					<?php the_post_thumbnail('medium', array('class' => 'card-img-top')); ?>
+				</a>
+			<?php endif; ?>
+			  </div><!--card-img-wrapper-->
+				<div class="card-title-top"></div>
+			  <h4 class="card-title"><a href="<?php the_permalink() ?>"><?php the_title(); ?></a></h4>
+	          <div class="card-text">
+							<?php the_excerpt(); ?>
+	          	<p><a href="<?php the_permalink() ?>" class="card-link button__link--small" >Mehr…</a></p>
+						</div>
+		</div>
 
 
-	<?php endwhile; else: ?>
-    <h1>Es wurden keine Themen definiert.</h1>
-    <?php endif;
-    // Restore original post data.
-    wp_reset_postdata();
-  	?>
-</div>
-
-			<div class="blog-area">
+		<?php endwhile; else: ?>
+	    <h1>Es wurden keine Themen definiert.</h1>
+	    <?php endif;
+	    // Restore original post data.
+	    wp_reset_postdata();
+	  	?>
+	</div><!--.cards-area-->
+</div><!--.cards-wrapper-->
+<div class="blog-wrapper">
+			<div class="blog-section">
 			<div class="blog-header">
 				<h1>Aktuelles</h1>
 				<?php /* TODO: Menü für Button einbauen  */ ?>
@@ -60,5 +61,6 @@
 					</div><!--.row-->
 				</article>
             <?php endwhile; endif; ?>
-			</div><!--.blog-area-->
+			</div><!--.blog-section-->
+</div><!--.blog-wrapper-->
 <?php get_footer(); ?>

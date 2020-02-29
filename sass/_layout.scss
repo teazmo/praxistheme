@@ -3,29 +3,31 @@
 *
 *
 */
-header {
-  background: #fff;
+
+/* ========================================== HEADER */
+
+.header-wrapper {
+  background:#fff;
 }
-.header-container {
-  padding: 24px;
+header {
+  padding: 16px;
 }
 .custom-logo {
   max-width:250px;
 }
-nav, .menu, footer {
+
+/* ========================================== NAV */
+
+.nav-wrapper, .menu {
   background-color: var(--secondary);
-}
-footer {
-  padding: 1rem;
 }
 
 /* ========================================== CARDS */
 
-.cards-area {
+.cards-section {
   display:flex;
   flex-wrap: wrap;
-  margin:0 -15px;
-  padding:20px 0;
+  padding:16px 0;
 }
 .card {
   flex: 0 0 30%;
@@ -66,18 +68,20 @@ footer {
 }
 
 /*=========================================== BLOG */
-
+.blog-wrapper {
+  background: #fff;
+}
 .blog-header {
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
-.blog-area {
+.blog-section {
 	padding:24px;
-  background-color: #FFFFFF;
 }
 article {
 	margin-bottom:64px;
+  background: #fff;
   h2 {
   	margin-top:0;
     a {
@@ -115,3 +119,11 @@ article {
     }
 }
 /* ===================================================== PAGE */
+
+/* ========================================== FOOTER */
+.footer-wrapper {
+  background-color: var(--secondary);
+}
+footer {
+  padding: 1rem;
+}

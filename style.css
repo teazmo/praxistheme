@@ -449,32 +449,29 @@ img {
 *
 *
 */
-header {
+/* ========================================== HEADER */
+.header-wrapper {
   background: #fff;
 }
 
-.header-container {
-  padding: 24px;
+header {
+  padding: 16px;
 }
 
 .custom-logo {
   max-width: 250px;
 }
 
-nav, .menu, footer {
+/* ========================================== NAV */
+.nav-wrapper, .menu {
   background-color: var(--secondary);
 }
 
-footer {
-  padding: 1rem;
-}
-
 /* ========================================== CARDS */
-.cards-area {
+.cards-section {
   display: flex;
   flex-wrap: wrap;
-  margin: 0 -15px;
-  padding: 20px 0;
+  padding: 16px 0;
 }
 
 .card {
@@ -521,19 +518,23 @@ footer {
 }
 
 /*=========================================== BLOG */
+.blog-wrapper {
+  background: #fff;
+}
+
 .blog-header {
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
 
-.blog-area {
+.blog-section {
   padding: 24px;
-  background-color: #FFFFFF;
 }
 
 article {
   margin-bottom: 64px;
+  background: #fff;
 }
 article h2 {
   margin-top: 0;
@@ -573,6 +574,15 @@ article h2 a {
 }
 
 /* ===================================================== PAGE */
+/* ========================================== FOOTER */
+.footer-wrapper {
+  background-color: var(--secondary);
+}
+
+footer {
+  padding: 1rem;
+}
+
 /* ========= NAVIGATION */
 /* hamburger icon */
 #main-menu a.menu-trigger {
@@ -873,19 +883,23 @@ a.menu-trigger.active span:after {
     left: 0;
   }
 
+  .page-template-sidebar-right .article {
+    max-width: 600px;
+  }
   .page-template-sidebar-right #content {
     display: flex;
   }
   .page-template-sidebar-right #sidebar {
     padding: 10px;
-    border: 1px solid grey;
-    margin-left: 20px;
+    background: #fff;
+    margin-left: 16px;
+    max-width: 300px;
   }
 }
-@media (min-width: 992px) {
-  .header-container, .menu-hauptmenue-container, #content, #footer-content {
+@media (min-width: 912px) {
+  header, nav, main, .cards-section, .blog-section, footer {
     margin: 0 auto;
-    max-width: 992px;
+    max-width: 912px;
   }
 
   article .row {
