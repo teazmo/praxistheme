@@ -94,6 +94,12 @@ a.menu-trigger.active span:after {
     color: #fff;
     background: var(--secondary);
 }
+#main-menu .menu-item-has-children > a::after {
+    content:"\f107";
+    font-family:'Font Awesome 5 Free',sans-serif;
+    margin-left:5px;
+    vertical-align: middle;
+}
 #main-menu a:hover {
     background: #6D415C;
 }
