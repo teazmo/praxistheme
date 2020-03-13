@@ -1,4 +1,6 @@
 
+
+</div><!-- #wrapper -->
 <div class="footer-wrapper">
 <footer id="footer">
       <?php if(is_active_sidebar('footer-widget-area')) : ?>
@@ -6,7 +8,6 @@
       <?php endif; ?>
 </footer><!-- #footer -->
 </div><!--footer-wrapper-->
-</div><!-- #wrapper -->
 
 <?php wp_footer(); ?>
 
