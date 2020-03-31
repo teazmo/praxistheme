@@ -476,14 +476,10 @@ header {
 
 /* ========================================== CARDS */
 .cards-section {
-  display: flex;
-  flex-wrap: wrap;
   padding: 16px 0;
 }
 
 .card {
-  flex: 0 0 30%;
-  max-width: 30%;
   background-color: #FFFFFF;
   margin: 8px;
 }
@@ -890,7 +886,14 @@ a.menu-trigger.active span:after {
   #main-menu .menu > li:hover > ul {
     left: 0;
   }
-
+  .cards-section {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  .card {
+    flex: 0 0 30%;
+    max-width: 30%;
+  }
   .page-template-sidebar-right .article {
     max-width: 600px;
   }
