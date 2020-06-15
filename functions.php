@@ -41,9 +41,9 @@ if ( ! function_exists( 'praxistheme_setup' ) ) :
         'custom-logo',
         array(
           'height'      => 190,
-          'width'       => 190,
-          'flex-width'  => false,
-          'flex-height' => false,
+			'width'		=> 190,
+          'flex-width'  => true,
+          'flex-height' => true
         )
       );
 
